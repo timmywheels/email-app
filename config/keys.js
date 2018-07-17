@@ -8,5 +8,8 @@ module.exports = {
     user: encodeURIComponent('email-app-dev'),
     pass: encodeURIComponent('TWheeler91$'),
     uri: '@ds137581.mlab.com:37581/email-app-dev'
+  },
+  cookie: {
+    key: 'erjbwelirug94825pgy248ghrewlkjbf43tjg944'
   }
 };
