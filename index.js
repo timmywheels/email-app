@@ -8,21 +8,21 @@ require('./models/User');
 require('./services/passport');
 
 mongoose.connect(
-	keys.mongo.uri,
-	{
-		useNewUrlParser: true,
-	},
+  keys.mongo.uri,
+  {
+    useNewUrlParser: true
+  },
 
-	function(err, db) {},
+  function(err, db) {}
 );
 
 const app = express();
 
 app.use(
-	cookieSession({
-		maxAge: 30 * 24 * 60 * 60 * 1000,
-		keys: [keys.cookie.key],
-	}),
+  cookieSession({
+    maxAge: 30 * 24 * 60 * 60 * 1000,
+    keys: [keys.cookie.key]
+  })
 );
 
 app.use(passport.initialize());
@@ -32,5 +32,5 @@ require('./routes/authRoutes')(app);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-	console.log(`App listening on port ${PORT}`);
+  console.log(`App listening on port ${PORT}`);
 });
