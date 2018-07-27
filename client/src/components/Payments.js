@@ -5,7 +5,7 @@ class Payments extends Component {
   render() {
     return (
       <StripeCheckout
-        name={'Email App'}
+        name={'Email'}
         description={'$5 for 5 email credits'}
         amount={500}
         token={token => console.log(token)}
