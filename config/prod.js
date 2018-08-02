@@ -14,6 +14,9 @@ module.exports = {
 		pubKey: process.env.STRIPE_PUBKEY,
 		secKey: process.env.STRIPE_SECKEY,
 	},
+	sendgrid: {
+		key: process.env.SENDGRID_KEY,
+	},
 };
 
 // clientId:
